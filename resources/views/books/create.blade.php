@@ -17,31 +17,31 @@
 
         <div class="form-group">
             <label for="ediction">Edicion</label>
-            <input type="text" class="form-control {{$errors->has('ediction')? 'is-invalid':''}}" name="ediction" id="ediction"
-                   value="{{isset($books->ediction)?$books->ediction:old('ediction') }}" >
+            <input type="text" class="form-control {{$errors->has('edition')? 'is-invalid':''}}" name="edition" id="edition"
+                   value="{{isset($books->edition)?$books->edition:old('edition') }}" >
         </div>
 
 
         <div class="form-group">
             <label for="year">Año</label>
-            <input type="number" class="form-control {{$errors->has('year')? 'is-invalid':''}}" name="year" id="year"
+            <input type="date" class="form-control {{$errors->has('year')? 'is-invalid':''}}" name="year" id="year"
                    value="{{isset($books->year)?$books->year:old('Year') }}">
         </div>
 
 
         <div class="form-group">
             <label for="year">Author</label>
-            <input type="number" class="form-control {{$errors->has('author')? 'is-invalid':''}}" name="year" id="author"
+            <input type="text" class="form-control {{$errors->has('author')? 'is-invalid':''}}" name="author" id="author"
                    value="{{isset($books->author)?$books->author:old('author') }}">
         </div>
         <div class="form-group hidden">
             <label for="name">Editorial</label>
-            <select name="Editorial_id_editorial" id="Editorial_id_editorial" class="form-control form-control-lg"
-                    value="{{isset($books->Editorial_id_editorial)?$books->Editorial_id_editorial:old('Editorial_id_editorial') }}">
+            <select name="Editorial_id" id="Editorial_id" class="form-control form-control-lg"
+                    value="{{isset($books->Editorial_id)?$books->Editorial_id:old('Editorial_id') }}">
                 <option selected>selecione</option>
                 @foreach ($editorials as $editorial)
 
-                    <option value="{{ $editorial->Editorial_id_editorial }}">{{ $editorial->name }}</option>
+                    <option value="{{ $editorial->id_editorial }}">{{ $editorial->name }}</option>
 
                 @endforeach
             </select>
