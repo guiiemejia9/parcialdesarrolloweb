@@ -26,21 +26,10 @@
                     <td>{{ $books->author}}</td>
                     <td>{{ $books->Editorial_id}}</td>
 
+                    <th>
 
 
-                    <td>
-                        <form method="POST" action="{{route('books-delete', $books->id_books)}}">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" onclick="return confirm('Estas Seguro?')"
-                                    class="btn btn-danger">Eliminar</button>
-                        </form>
-                        <form method="GET" action="{{route('$books-edit', $books->id_books)}}">
-                            @csrf
-                            @method('GET')
-                            <button type="submit" class="btn btn-warning">Editar</button>
-                        </form>
-                    </td>
+                    </th>
                 </tr>
             @endforeach
             </tbody>
