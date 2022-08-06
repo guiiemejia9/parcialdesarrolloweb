@@ -20,7 +20,7 @@
 
 <body>
 
-<nav class="navbar navbar-expand-lg "style= "background-color: #04484D;">
+<nav nav class="navbar navbar-light" style="background-color: #e3f2fd;">
     <a class="navbar-brand" style="color: #C51212" href="/">CRUD ESTUDIANTES</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
